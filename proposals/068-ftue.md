@@ -42,7 +42,10 @@ This is the very first stage for a first time user and involves the following, w
 
 TBD as we would like to automate some of this.
 
-- As a user, I understand that I need to have created a Red Hat account, requested and have been granted an OpenShift Online account with Syndesis installed on it, prior to using Syndesis.
+- As a first time user, I understand that I need to have created a Red Hat account before requesting a Syndesis account.
+- As a first time user, I would like to create an OpenShift Online account and be able to install Syndesis with one click.*
+ 
+ \* In the meantime, users will need to have been granted an OpenShift Online account with Syndesis installed on it, prior to using Syndesis, as this is not currently possible and requires a manual approval and installation.
 
 
 
@@ -54,18 +57,10 @@ At the point of login, we would ideally check for pre-existing GitHub configurat
 
 
 
-### Domain
-
-TBD.
-
 ### REST API
 
 TBD.
 
-
-### API
-
-TBD.
 
 ---
 
@@ -79,14 +74,15 @@ The next step is to create and subsequently connect a GitHub OAuth app to the Sy
 
 ### User Story
 
-- As a user, I would like a clear indication of how to proceed in order to use Syndesis, which includes a link and perhaps brief explanation of how to create a GitHub OAuth App, along with how to connect it to my Syndesis account.
-- As a user, I would like clear visual guidance on how to proceed with using Syndesis once my OAuth App is connected, such as with a guided tour (interactive/non-interactive) that educates me on what connections and integrations are, and how to get started with them.
-- As a user, at any moment, I would like to be able to exit out of the guided tour.
-- As a user, at any moment, I would like to be able to access/restart the guided tour.
-- As a user, I would like to have a sample project to start with.
-= As a user, I would like to be able to delete the sample project once I'm done working with it.
-- As a user, I would like to have documentation provided throughout my experience in Syndesis, such as through tooltips.
-- As a user, I would like to be able to provide feedback on my experience as a first time user through something like an interactive survey.
+- As a first time user, I would like a clear indication of how to proceed in order to use Syndesis, which includes a link and perhaps brief explanation of how to create a GitHub OAuth App, along with how to connect it to my Syndesis account.
+- As a returning user, I would like to be directed to the Getting Started page and skip the GitHub OAuth App creation and guided tour steps.
+- As a first time user, I would like clear visual guidance on how to proceed with using Syndesis once my OAuth App is connected, such as with a guided tour (interactive/non-interactive) that educates me on what connections and integrations are, and how to get started with them.
+- As a first time user, at any moment, I would like to be able to exit out of the guided tour.
+- As a first time user, at any moment, I would like to be able to access/restart the guided tour.
+- As a first time user, I would like to have a sample project to start with.
+= As a first time user, I would like to be able to delete the sample project once I'm done working with it.
+- As a first time user, I would like to have documentation provided throughout my experience in Syndesis, such as through tooltips.
+- As a first time user, I would like to be able to provide feedback on my experience as a first time user through something like an interactive survey.
 
 
 
@@ -104,14 +100,12 @@ TBD.
 
 ### REST API
 
+TBD. Will likely need to pass along a property for the user that lets the UI know whether or not they are a first time user.
+
 **Persisting State**
 
 Steps of the guided tour will not be persisted on the backend. We can store this in the client if necessary.
 
-
-### API
-
-TBD. Will likely need to pass along a property for the user that lets the UI know whether or not they are a first time user.
 
 ### UI
 
@@ -130,7 +124,7 @@ If the user is determined to be a first-time user, they will automatically have 
 
 **User Documentation**
 
-Most user documentation will be available via tooltips while the user navigates the application. Tooltips will be pre-generated into the syndesis-ui repo, e.g. as part of the build process. This step should requiring fetching a JSON file from e.g. raw.github.com and then placing it into syndesis-ui so that it can then be committed.
+Most user documentation will be available via tooltips while the user navigates the application. Tooltips will be pre-generated into the syndesis-ui repo, e.g. as part of the build process. This step will likely require fetching a JSON file from e.g. raw.github.com and then placing it into syndesis-ui repository so that it can be committed.
 
 ### Reference
 
