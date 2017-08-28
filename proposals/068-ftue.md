@@ -1,4 +1,4 @@
-## First Time User Experience (FTUE)
+# First Time User Experience (FTUE)
 
 * Issue: https://github.com/syndesisio/syndesis-project/issues/68
 * Sprint: 16
@@ -6,11 +6,14 @@
   - syndesis-rest
   - syndesis-ui
 
-## Objective
+## Background
 
 The goal of the first time user experience (FTUE) initiative is to provide first users with an optimal experience during the on-boarding process in time for Tech Preview 1.
 
-The purpose of this document is to outline some of the tasks involved in the onboarding process. These tasks might include, but are not limited to, the following:
+
+### Discussion
+
+The purpose of this document is to outline some of the tasks involved in the on-boarding process. These tasks might include, but are not limited to, the following:
 
 1. How to manage registration requests.
 2. Providing a single-click installation script for setting new users.
@@ -19,7 +22,7 @@ The purpose of this document is to outline some of the tasks involved in the onb
 5. Methods of communication with users (e.g. automated emails, mailing lists, forums).
 6. A registration page.
 7. A feedback form.
-8. A walk-through for usage of Syndesis.
+8. A guided tour or walk-through for usage of Syndesis.
 
 In theory, this should be broken up into two major stages for first time users:
 - **Stage 1**: Signing up to evaluate Syndesis.
@@ -34,6 +37,15 @@ This is the very first stage for a first time user and involves the following, w
 3. An OpenShift account is then created and Syndesis is installed on the user's account.
 4. The user receives an email with instructions on how to log into Syndesis using their newly created OpenShift account.
 
+
+### User Story
+
+TBD as we would like to automate some of this.
+
+- As a user, I understand that I need to have created a Red Hat account, requested and have been granted an OpenShift Online account with Syndesis installed on it, prior to using Syndesis.
+
+
+
 ### First Time Logging in
 
 At the point of login, we would ideally check for pre-existing GitHub configuration settings.
@@ -41,11 +53,41 @@ At the point of login, we would ideally check for pre-existing GitHub configurat
   - **If Settings do NOT Exist**: No GitHub user account has been configured and the user will be pushed through the GitHub OAuth flow. This entails the user granting Syndesis with permissions to access their GitHub account. This only needs to be done once.
 
 
-## Stage 2: First Time Setup & Usage
+
+### Domain
+
+TBD.
+
+### REST API
+
+TBD.
+
+
+### API
+
+TBD.
+
+---
+
+## Stage 2: First Time Setup and Usage
 
 At this stage, the user is expected to have a registered OpenShift Online account with Syndesis installed. This is where things like proper documentation and a detailed guided tour are essential to providing an optimal first time user experience.
 
 The next step is to create and subsequently connect a GitHub OAuth app to the Syndesis account. We should always programmatically check that the user does not already have one configured.
+
+
+
+### User Story
+
+- As a user, I would like a clear indication of how to proceed in order to use Syndesis, which includes a link and perhaps brief explanation of how to create a GitHub OAuth App, along with how to connect it to my Syndesis account.
+- As a user, I would like clear visual guidance on how to proceed with using Syndesis once my OAuth App is connected, such as with a guided tour (interactive/non-interactive) that educates me on what connections and integrations are, and how to get started with them.
+- As a user, at any moment, I would like to be able to exit out of the guided tour.
+- As a user, at any moment, I would like to be able to access/restart the guided tour.
+- As a user, I would like to have a sample project to start with.
+= As a user, I would like to be able to delete the sample project once I'm done working with it.
+- As a user, I would like to have documentation provided throughout my experience in Syndesis, such as through tooltips.
+- As a user, I would like to be able to provide feedback on my experience as a first time user through something like an interactive survey.
+
 
 
 ### Setting Up a GitHub OAuth App
@@ -56,3 +98,36 @@ They will then need to copy and paste the credentials of the GitHub OAuth applic
 
 
 
+### Domain
+
+TBD.
+
+### REST API
+
+**Persisting State**
+
+Steps of the guided tour will not be persisted on the backend. We can store this in the client if necessary.
+
+
+### API
+
+TBD. Will likely need to pass along a property for the user that lets the UI know whether or not they are a first time user.
+
+### UI
+
+**Guided Tour**
+
+If the user is determined to be a first-time user, they will automatically have a guided tour. The user should be able to navigate backwards and forwards, as well as see the total number of steps. The tour should instruct them with the following:
+
+1. How to create a GitHub OAuth App.
+2. How to connect it to your Syndesis account (e.g. with credentials).
+3. A brief introduction of the dashboard.
+4. A brief introduction of the models/components of Syndesis and what they are (e.g. integrations, connections, your profile).
+5. Direct them to a sample project they can work with.
+6. Advise on how to delete the project once they are done, and possibly how to create a new one of their own. *
+
+\* It gets a bit tricky here, because we don't want to overwhelm the user with too many steps in the tour.
+
+**User Documentation**
+
+Most user documentation will be available via tooltips while the user navigates the application. Tooltips will be pre-generated into the syndesis-ui repo, e.g. as part of the build process. This step should requiring fetching a JSON file from e.g. raw.github.com and then placing it into syndesis-ui so that it can then be committed.
