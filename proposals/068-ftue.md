@@ -131,3 +131,16 @@ If the user is determined to be a first-time user, they will automatically have 
 **User Documentation**
 
 Most user documentation will be available via tooltips while the user navigates the application. Tooltips will be pre-generated into the syndesis-ui repo, e.g. as part of the build process. This step should requiring fetching a JSON file from e.g. raw.github.com and then placing it into syndesis-ui so that it can then be committed.
+
+### Reference
+
+- JIRA: https://issues.jboss.org/browse/IPAAS-339?_sscc=t
+- Epic: https://github.com/syndesisio/syndesis-project/issues/68
+- Ideas: https://launch.openshift.io/wizard
+- Other Idea: https://launch.openshift.io/wizard/launchpad-new-project/1
+- UXD issue: https://github.com/syndesisio/syndesis-ux/issues/7
+- UI Issue: https://github.com/syndesisio/syndesis-ui/issues/57
+- FTUE Journey Map: https://docs.google.com/presentation/d/15vxQIX9TCUXAS8-JLD2m_10TLd0sbFjIMZwW9p0zRww/edit#slide=id.p
+- GH user & org design for configuration via global settings: https://github.com/syndesisio/syndesis-ux/issues/29
+- GH Settings Designs: https://github.com/syndesisio/syndesis-ux/pull/34
+
