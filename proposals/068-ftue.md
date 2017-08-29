@@ -111,6 +111,8 @@ Steps of the guided tour will not be persisted on the backend. We can store this
 
 **Guided Tour**
 
+Designs: [GH Issue](https://github.com/syndesisio/syndesis-ux/issues/30) | [PDF](https://github.com/syndesisio/syndesis-ux/files/1249617/iPaaS_FTUE_Designs.pdf)
+
 If the user is determined to be a first-time user, they will automatically have a guided tour. The user should be able to navigate backwards and forwards, as well as see the total number of steps. The tour should instruct them with the following:
 
 1. How to create a GitHub OAuth App.
@@ -124,15 +126,15 @@ If the user is determined to be a first-time user, they will automatically have 
 
 **User Documentation**
 
-Most user documentation will be available via tooltips while the user navigates the application. Tooltips will be pre-generated into the syndesis-ui repo, e.g. as part of the build process. This step will likely require fetching a JSON file from e.g. raw.github.com and then placing it into syndesis-ui repository so that it can be committed.
+Most basic user documentation will be available via tooltips while the user navigates the application. Tooltips will be pre-generated into the syndesis-ui repo, e.g. as part of the build process. This step will likely require fetching a JSON file from e.g. raw.github.com which will be placed into the syndesis-ui repository to be committed.
 
 ### Reference
 
 - JIRA: https://issues.jboss.org/browse/IPAAS-339?_sscc=t
 - Epic: https://github.com/syndesisio/syndesis-project/issues/68
-- Ideas: https://launch.openshift.io/wizard
-- Other Idea: https://launch.openshift.io/wizard/launchpad-new-project/1
 - UXD issue: https://github.com/syndesisio/syndesis-ux/issues/7
+- Designs (GH): https://github.com/syndesisio/syndesis-ux/issues/30
+- Designs (PDF): https://github.com/syndesisio/syndesis-ux/files/1249617/iPaaS_FTUE_Designs.pdf
 - UI Issue: https://github.com/syndesisio/syndesis-ui/issues/57
 - FTUE Journey Map: https://docs.google.com/presentation/d/15vxQIX9TCUXAS8-JLD2m_10TLd0sbFjIMZwW9p0zRww/edit#slide=id.p
 - GH user & org design for configuration via global settings: https://github.com/syndesisio/syndesis-ux/issues/29
