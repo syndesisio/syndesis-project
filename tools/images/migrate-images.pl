@@ -6,11 +6,10 @@ use strict;
 
 =head1 Transfering Docker images 
 
-This sript is from our pipeline/brew builds to our ignite cluster. 
+This sript is from our pipeline/brew builds to our ignite cluster. For a simple shell version (which works with fixed versions and build numbers for all images) please refer to C<migrate-images-from-brew.sh>
 
 B<Before running this script please verify the hash C<RELEASE_MAP> for the
 proper tag numbers
-
 
 Run with 
 
