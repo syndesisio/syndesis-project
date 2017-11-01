@@ -38,7 +38,7 @@ docker tag "docker.io/openshift/${OAUTH_PROXY}" "${IGNITE_REGISTRY}/${OAUTH_PROX
 docker push "${IGNITE_REGISTRY}/${OAUTH_PROXY}"
 
 # Push FIS s2i builder image (decoupled from Syndesis version)
-S2I_IMAGE_SRC="registry.access.redhat.com/jboss-fuse-6/fis-java-openshift:2.0-13"
+S2I_IMAGE_SRC="registry.access.redhat.com/jboss-fuse-6/fis-java-openshift:2.0"
 S2I_IMAGE_TARGET="fuse-ignite-java-openshift:1.0"
 docker pull ${S2I_IMAGE_SRC}
 docker tag ${S2I_IMAGE_SRC} ${IGNITE_REGISTRY}/${S2I_IMAGE_TARGET}
